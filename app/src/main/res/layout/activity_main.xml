@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#D3E4F3" />
+
+            <ImageView
+
+                android:id="@+id/imagesync"
+                android:layout_width="160dp"
+                android:layout_height="66dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/imageView"
+                android:src="@drawable/image"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="40dp"
+                android:layout_height="44dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="4dp"
+                app:srcCompat="@drawable/baseline_notes_24" />
+
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/appBarLayout"
+        android:id="@+id/ralativeLayout"
+        android:background="#D3E4F3"
+        android:layout_height="wrap_content">
+        <androidx.viewpager2.widget.ViewPager2
+
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:id="@+id/viewPager2"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/viewPager2"
+
+            android:gravity="center"
+            android:layout_marginTop="15dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:cardCornerRadius="20dp"
+                android:layout_marginRight="10dp"
+                app:cardElevation="0dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/iv1"
+                    >
+
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/iv2"
+                    >
+
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D3E4F3"
+        android:layout_below="@+id/iv2">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="15dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <androidx.cardview.widget.CardView
+                    app:cardBackgroundColor="#59A5C9ED"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="390dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="5dp"
+                    android:outlineSpotShadowColor="@color/white"
+                    app:cardElevation="0dp"
+                    android:id="@+id/CD1"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardCornerRadius="15dp"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="80dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="6dp"
+                        app:cardCornerRadius="5dp"
+                        android:id="@+id/cardView1"
+                        android:background="@color/white"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="5dp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="100dp"
+                            android:text="Gas Sensor"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/textView1"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/textview2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView1"
+                            android:lines="2"
+                            android:text="Mother box which connect with router
+                        also it connect with child box"
+                            android:textColor="#615D5D"
+                            android:layout_marginLeft="100dp"/>
+
+                        <Button
+                            android:id="@+id/buttonBlue"
+                            android:layout_below="@id/textview2"
+                            android:layout_marginStart="200dp"
+                            android:layout_width="60dp"
+                            android:padding="1dp"
+                            android:layout_height="130dp"
+                            android:backgroundTint="#092842"
+                            android:text="3000"
+                            android:textColor="#FBFBFB"
+                            android:textColorHighlight="#FFFFFF"
+                            android:textColorHint="#FFFFFF"
+                            android:textColorLink="#FBFBFB"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/buttonOrange"
+                            android:layout_width="60dp"
+                            android:layout_height="130dp"
+                            android:padding="1dp"
+                            android:layout_below="@id/textview2"
+                            android:layout_marginStart="270dp"
+                            android:backgroundTint="#FF5722"
+                            android:text="Buy"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="#FBFBFB"
+                            android:textColorHighlight="#FFFFFF"
+                            android:textColorHint="#FFFFFF"
+                            android:textColorLink="#FBFBFB"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardBackgroundColor="#59A5C9ED"                    android:layout_marginTop="15dp"
+                    android:layout_width="390dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="5dp"
+                    android:outlineSpotShadowColor="@color/white"
+                    app:cardElevation="0dp"
+                    android:layout_below="@id/CD1"
+                    android:id="@+id/CD2"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardCornerRadius="15dp"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="80dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="6dp"
+                        app:cardCornerRadius="5dp"
+                        android:id="@+id/cardView2"
+                        android:background="@color/white"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="5dp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="100dp"
+                            android:text="Gas Sensor"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/textView3"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/textview4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView3"
+                            android:lines="2"
+                            android:text="Mother box which connect with router
+                        also it connect with child box"
+                            android:textColor="#615D5D"
+                            android:layout_marginLeft="100dp"/>
+
+                        <Button
+                            android:id="@+id/buttonBlue2"
+                            android:layout_below="@id/textview4"
+                            android:layout_marginStart="200dp"
+                            android:layout_width="60dp"
+                            android:layout_height="130dp"
+                            android:padding="1dp"
+                            android:backgroundTint="#092842"
+                            android:text="3000"
+                            android:textColor="#FBFBFB"
+                            android:textColorHighlight="#FFFFFF"
+                            android:textColorHint="#FFFFFF"
+                            android:textColorLink="#FBFBFB"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/buttonOrange2"
+                            android:layout_width="60dp"
+                            android:layout_height="130dp"
+                            android:padding="1dp"
+                            android:layout_below="@id/textview4"
+                            android:layout_marginStart="270dp"
+                            android:layout_marginEnd="5dp"
+                            android:backgroundTint="#FF5722"
+                            android:minHeight="48dp"
+                            android:text="Buy"
+                            android:textColor="#FBFBFB"
+                            android:textColorHighlight="#FFFFFF"
+                            android:textColorHint="#FFFFFF"
+                            android:textColorLink="#FBFBFB"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardBackgroundColor="#59A5C9ED"                    android:layout_marginTop="15dp"
+                    android:layout_width="390dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="5dp"
+                    android:outlineSpotShadowColor="@color/white"
+                    app:cardElevation="0dp"
+                    android:layout_below="@id/CD2"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardCornerRadius="15dp"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="80dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="6dp"
+                        app:cardCornerRadius="5dp"
+                        android:id="@+id/cardView3"
+                        android:background="@color/white"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="5dp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="100dp"
+                            android:text="Gas Sensor"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/textView5"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/textview6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView5"
+                            android:lines="2"
+                            android:text="Mother box which connect with router
+                        also it connect with child box"
+                            android:textColor="#615D5D"
+                            android:layout_marginLeft="100dp"/>
+
+                        <Button
+                            android:id="@+id/buttonBlue3"
+                            android:layout_below="@id/textview6"
+                            android:layout_marginStart="200dp"
+                            android:layout_width="60dp"
+                            android:layout_height="130dp"
+                            android:backgroundTint="#092842"
+                            android:text="3000"
+                            android:padding="1dp"
+                            android:textColor="#FBFBFB"
+                            android:textColorHighlight="#FFFFFF"
+                            android:textColorHint="#FFFFFF"
+                            android:textColorLink="#FBFBFB"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/buttonOrange3"
+                            android:layout_width="60dp"
+                            android:layout_height="130dp"
+                            android:layout_below="@id/textview6"
+                            android:layout_marginStart="270dp"
+                            android:backgroundTint="#FF5722"
+                            android:text="Buy"
+                            android:padding="1dp"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="#FBFBFB"
+                            android:textColorHighlight="#FFFFFF"
+                            android:textColorHint="#FFFFFF"
+                            android:textColorLink="#FBFBFB"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:background="#092842"
+                app:itemIconSize="30dp"
+                app:menu="@menu/menu"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
